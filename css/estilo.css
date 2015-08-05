@@ -96,7 +96,7 @@ figure {
 }
 
 figure img {
-	width: 300px;
+	width: 250px;
 	height: 250px;
 }
 figure figcaption {
@@ -129,12 +129,20 @@ figure:hover figcaption {
 }
 
 @media (max-width: 453px) {
+    body {
+		color: red;
+	}
 	.me-projects h2:before,
     .me-projects h2:after  {
 	   width: 25%;
 	}
 	
 	.me-projects ul li {
-		width: 300px;;
+		display: inline;
+	}
+	
+	.me-projects ul li figure {
+		
+		width: 96%px;
 	}
 }
