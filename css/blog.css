@@ -1,0 +1,143 @@
+body {
+	color: #FFF;
+	font-family: 'Roboto', sans-serif;
+}
+
+.me-profile-header {
+	background: #333;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	width: 96%;
+}
+
+.me-profile-header h1 {
+	padding: 20px;
+	font-size: 2em;
+	margin-left: 20px;
+}
+
+.me-profile-header h1 > a {
+	text-decoration: none;
+	color: #B8B894;
+	transition: 2s;
+}
+
+.me-profile-header h1 > a:hover {
+    border-bottom: 2px solid #7E7E7E;	
+	color: #7E7E7E;
+	transition: 1s;
+}
+
+.me-profile-header ul  {
+	margin-right: 60px;
+}
+
+.me-profile-header ul li {
+	display: inline-block;
+	padding: 0 5px 10px 5px;
+	transition: 1s;
+}
+
+.me-profile-header ul li :hover {
+	border-bottom: 2px solid #7E7E7E;
+	color: #7E7E7E;
+	transition: 1s;
+}
+
+.me-profile-header ul li a {
+	text-decoration: none;
+	font-size: 1.3em;
+	color: #B8B894;
+}
+
+/*************************************************************************/
+
+.me-list-posts {
+	background: #333;
+	margin-right: auto;
+	margin-left: auto;
+	width: 96%;
+	margin-top: 20px;
+	padding: 10px 0 100px 0;
+}
+
+.me-list-posts p {
+	padding: 20px;
+	font-size: 2.4em;
+	margin-left: 40px;
+}
+
+.me-list-posts h2 {
+	padding: 20px;
+	font-size: 2em;
+	margin-left: 40px;
+}
+
+.me-list-posts ul {
+	list-style: none;
+}
+
+.me-list-posts li {
+	padding: 20px;
+	font-size: 1.5em;
+}
+
+.me-list-posts a {
+	text-decoration: none;
+}
+
+.item-date {
+	display: block;
+	color: #B8B894;
+}
+
+.item-title {
+	color: #FFF;
+	font-size: 1.3em;
+}
+.item-title:hover {
+	border-bottom: 2px solid #FFF;
+}
+
+/************************************************/
+
+.me-posts {
+    padding: 10px 0 100px 0;
+	width: 96%;
+	margin-right: auto;
+	margin-left: auto;
+	background: #333;
+}
+
+.me-post-article {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	background: #333;
+}
+
+.me-post-date {
+	color: #B8B894;
+	font-size: 1.3em;
+}
+
+.me-post-article h1 {
+	font-size: 3em;
+	padding: 5px;
+	font-weight: bolder;
+}
+
+.me-post-article h2 {
+	font-size: 2.5em;
+	
+}
+.me-post-article p {
+	text-align: left;
+	font-size: 1.7em;
+	font-weight: normal;
+}
+
+.me-post-article ul li {
+	font-size: 1.5em;
+}
