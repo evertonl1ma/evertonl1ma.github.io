@@ -62,7 +62,19 @@ body {
 }
 
 .me-projects h2 {
-	text-align: center;
 	font-size: 2em;
 	padding-top: 10px;
+	margin-left: 50px;
+}
+
+.me-projects ul li {
+    padding-top: 20px;
+	list-style: none;
+	font-size: 2em;
+	border-bottom: 1px solid #FFF;
+	width: 600px;
+}
+
+.me-projects ul a {
+	color: #7E7E7E;
 }
