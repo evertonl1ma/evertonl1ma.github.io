@@ -142,7 +142,7 @@ figure:hover figcaption {
 	}
 	
 	.me-projects ul li figure {
-		
-		width: 96%px;
+		margin-right: 120px;
+		width: 220px;
 	}
 }
