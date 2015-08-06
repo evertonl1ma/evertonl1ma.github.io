@@ -70,11 +70,25 @@ body {
 .me-projects ul li {
     padding-top: 20px;
 	list-style: none;
-	font-size: 2em;
 	border-bottom: 1px solid #FFF;
 	width: 600px;
 }
 
+.me-projects .project-title {
+	font-size: 2em;
+}
+
 .me-projects ul a {
 	color: #7E7E7E;
+}
+
+.me-projects ul li  p {
+	font-size: 1.4em;
+	color: aqua;
+	margin-bottom: 10px;
+}
+
+p {
+	color: #FFF;
+	margin: 40px 0 0 50px;
 }
