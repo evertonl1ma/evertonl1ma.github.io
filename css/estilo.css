@@ -102,3 +102,34 @@ body {
 	color: #FFF;
 	margin-bottom: 10px;
 }
+
+/* Adaptando para dispositivos móveis */
+
+@media (max-width: 1249px) {
+	.container {
+		width: 96%;
+	}
+	
+	.me-projects h2 {
+	font-size: 1.5em;
+	padding-top: 10px;
+	margin-left: 50px;
+    }
+	
+	.me-projects ul li {
+    padding-top: 20px;
+	list-style: none;
+	border-bottom: 1px solid #FFF;
+	width: 60%;
+    }
+	
+	.me-projects .project-title {
+	font-size: 1.5em;
+    }
+	
+	.me-projects ul li  p {
+	font-size: 1em;
+	color: #FFF;
+	margin-bottom: 10px;
+}
+}
