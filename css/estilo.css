@@ -78,17 +78,27 @@ body {
 	font-size: 2em;
 }
 
+.me-projects .project-more{
+	color: #FFF;
+	font-size: 1.4em;
+	margin: 40px 0 0 50px;
+}
+
+.me-projects a {
+    text-decoration: none;
+	color: #7E7E7E
+}
 .me-projects ul a {
+    text-decoration: none;
 	color: #7E7E7E;
+}
+
+.me-projects a:hover {
+	border-bottom: 1px solid #7E7E7E;
 }
 
 .me-projects ul li  p {
 	font-size: 1.4em;
-	color: aqua;
-	margin-bottom: 10px;
-}
-
-p {
 	color: #FFF;
-	margin: 40px 0 0 50px;
+	margin-bottom: 10px;
 }
