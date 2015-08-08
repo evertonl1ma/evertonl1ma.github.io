@@ -1,14 +1,6 @@
-body {
-	color: #FFF;
-	font-family: 'Roboto', sans-serif;
-}
 
 .me-profile-header {
-	background: #333;
-	margin-right: auto;
-	margin-left: auto;
 	margin-top: 30px;
-	width: 96%;
 }
 
 .me-profile-header h1 {

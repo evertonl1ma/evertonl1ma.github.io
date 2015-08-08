@@ -7,11 +7,11 @@ body {
 	width: 1250px;
 	margin-left: auto;
 	margin-right: auto;
+	background: #333;
 }
 
 /* Cabeçalho */
 .me-profile {
-	background: #333;
 	margin-top: 30px;
 	text-align: center;
 }
@@ -58,7 +58,6 @@ body {
 
 .me-projects {
     padding: 10px 0 100px 0;
-	background: #333;
 }
 
 .me-projects h2 {
