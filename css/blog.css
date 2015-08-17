@@ -99,6 +99,10 @@
 	background: #333;
 }
 
+.me-post-article a {
+	color: #B8B894;
+}
+
 .me-post-date {
 	color: #B8B894;
 	font-size: 1.3em;
