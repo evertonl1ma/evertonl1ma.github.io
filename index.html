@@ -1,78 +1,63 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Everton Lima</title>
-	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/estilo.css">
-  </head>
-  <body>
-    <header class="me-profile container">
-	    <h1>Olá, meu nome é <a href="http://evertondelima.com.br/">Everton Lima</a> <br>e eu sou desenvolvedor front end</h1>
-		
-		<nav class="me-profile-social-links">
-		  <ul>
-		    <li>
-			  <a href="https://github.com/Evertonl1ma" target="_blank">Github</a>
-			</li>
-		    <li>
-			  <a href="https://www.linkedin.com/in/evertonl1ma" target="blank">Linkedin</a>
-			</li>
-		    <li>
-			  <a href="blog.html">Blog</a>
-			</li>
-		    <li>
-			  <a href="https://medium.com/@evertonl1ma" target="blank">Medium</a>
-			</li>
-		  </ul>
-		</nav>
-	</header>
-	<div class="me-projects container">
-	  <h2>Alguns projetos</h2>
-	  <ul>
-	    <li>
-		  <a href="https://jornada-frontend.github.io" target="_blank">
-		    <span class="project-title">Jornada front end</span>
-		  </a>
-		  <p class="project-descript">
-			Uma reunião de diversos materiais com o objetivo de organizar os estudos.
-		  </p>
-		</li>
-		
-		 <li>
-		  <a href="https://github.com/evertonl1ma/Sistema-de-grids" target="_blank">
-		    <span class="project-title">Sistema de grids</span>
-		  </a>
-		  <p class="project-descript">
-		    Um simples sistema de grids feito com CSS puro.
-		  </p>
-		</li>
-		
-		 <li>
-		  <a href="desafio-um-site-por-semana.html" target="_blank">
-		    <span class="project-title">Desafio 1 site por semana</span>
-		  </a>
-		  <p class="project-descript">
-			Desafio de fazer um site por semana durante 1 ano aproximadamente.
-		  </p>
-		</li>
-		
-		 <li>
-		  <a href="http://codepen.io/Evertonl1ma/pen/MwLxBV" target="_blank">
-		  <span class="project-title">Accordion</span>
-		  </a>
-		  <p class="project-descript">
-		    O CSS3 é muito poderoso, e com ele podemos fazer coisas incríveis.
-			Aqui eu resolvi tentar fazer um accordion com CSS puro.
-		  </p>
-		</li>
-	  </ul>
-	  
-	  <p class="project-more">
-	    Você pode ver mais algumas coisas no meu <a href="http://codepen.io/Evertonl1ma/" target="_blank">codepen</a> 
-		ou acessando meu <a href="https://github.com/evertonl1ma" target="_blank">github</a>.
-	  </p>
-	</div>
-  </body>
-</html>
+---
+layout: default
+menu: home
+css: ['index.css', 'sidebar-popular-repo.css']
+---
+<section class="jumbotron">
+    <div class="container">
+        <h1>{{ site.title }}</h1>
+        <div id="jumbotron-meta-info">
+            <span class="meta-info">
+                <span class="octicon octicon-location"></span>
+                {{ site.location }}
+            </span>
+            <span class="meta-info hvr-grow">
+                <span class="octicon octicon-organization"></span>
+                <a href="{{ site.company_url }}" target="_blank">{{ site.company }}</a>
+            </span>
+            <span class="meta-info hvr-grow">
+                <span class="octicon octicon-mark-github"></span>
+                <a href="{{ site.github_url }}" target="_blank">@{{ site.name }}</a>
+            </span>
+        </div>
+    </div>
+</section>
+<section class="content container">
+
+    <div class="row">
+
+        <!-- Post List -->
+        <div class="col-md-8">
+
+            <ol class="post-list">
+                {% for post in paginator.posts %}
+                <li class="post-list-item">
+                    <h2 class="post-list-title">
+                        <a class="hvr-underline-from-center" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                    </h2>
+                    <p class="post-list-description">
+                        {{ post.excerpt | strip_html | strip }}
+                    </p>
+                    <p class="post-list-meta">
+                        <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
+                    </p>
+                </li>
+                {% endfor %}
+            </ol>
+
+            <!-- Pagination -->
+            {% include pagination.html %}
+
+            <!-- Comments -->
+            {% include disqus-comments.html %}
+
+        </div>
+
+        <div class="col-md-4">
+            {% include sidebar-popular-repo.html %}
+        </div>
+
+    </div>
+
+</section>
+
