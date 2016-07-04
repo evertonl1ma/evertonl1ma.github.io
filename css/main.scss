@@ -1,0 +1,572 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
+
+/*************************************************************
+                             MEU CSS
+**************************************************************/
+       body,
+		* {
+			margin: 0;
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		html,
+		body {
+			height: 100%;
+		}
+
+		.clearfix::after,
+		.clearfix::before {
+			content: "";
+			display: table;
+		}
+
+		.clearfix::after {
+			clear: both;
+		}
+
+		.header-container {
+			margin-top: 0;
+			background: #446CB3;
+			height: 190px;
+			box-shadow: 2px 2px 5px #3A539B;
+		}
+
+		.nav-container {
+			position: relative;
+			top: 40px;
+			box-shadow: 2px 2px 5px #3A539B,
+						-2px -2px 5px #3A539B;
+			padding: 20px;
+		}
+
+		.header-title {
+			float: left;
+			font-size: 38px;
+			color: #FFF;
+		}
+
+		.header-title a {
+		   text-decoration: none;
+		   color: #FFF;
+		}
+
+		.nav-top {
+			margin-top: 20px;
+			float: right;
+			margin-right: 20px;
+		}
+
+
+		.nav-top .close {
+			color: #446CB3;
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			font-size: 30px;
+			font-weight: bold;
+			cursor: pointer;
+			display: none;
+		}
+
+		.toggle-menu {
+			cursor: pointer;
+			display: none;
+		}
+
+		.toggle-menu span {
+			display: block;
+			width: 40px;
+			height: 3px;
+			background: #FFF;
+			margin-bottom: 10px;
+			position: relative;
+			top: 10px;
+			left: 90%;
+		}
+
+		.nav-top .nav-top-itens{
+			list-style: none;
+		}
+
+		.nav-top .nav-top-itens li {
+			display: inline-block;
+			transition: 0.3s;
+		}
+
+		.nav-top .nav-top-itens li:hover {
+			border-bottom: 2px solid #FFF;
+			transition: 0.3s;
+		}
+
+		.nav-top .nav-top-itens li a {
+			text-decoration: none;
+			color: #FFF;
+			font-size: 20px;
+			padding: 5px;
+		}
+
+		.content-list {
+			margin-top: 30px;
+			padding: 10px 20px;
+		}
+
+		.post-title {
+			text-align: center;
+			padding-bottom: 50px;
+			color: #808080;
+		}
+
+		.content-list .list-post-item {
+			width: 600px;
+			padding-bottom: 10px;
+			margin-bottom: 25px;
+			border-bottom: 1px solid #DADFE1;
+		}
+
+		.list-post-item .list-post-title {
+			font-size: 30px;
+		}
+
+		.list-post-item .list-post-title a {
+			text-decoration: none;
+			color: #446CB3;
+		}
+
+		.list-post-item .list-post-date time {
+			color: #6C7A89;
+		}
+
+			.row {
+			width: 920px;
+			margin: 0;
+			padding: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+
+	 .projects-container {
+	 	overflow: hidden;
+	 }
+
+		.project .content .title-project p {
+   color: #FFF;
+   font-size: 30px;
+   font-weight: bold;
+   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+   text-align: center;
+   margin-top: 50px;
+}
+
+.project .content .descricao {
+  border-top: 2px solid #FFF;
+}
+.project .content .descricao p {
+  color: #FFF;
+  text-align: center;
+  font-size: 20px;
+  
+}
+.thumbnail-project {
+			display: inline-block;
+			width: 260px;
+			padding: 5px;
+			margin: 5px 15px;
+			margin-bottom: 15px;
+			vertical-align: top;
+      box-shadow: 2px 2px 2px #DADFE1;
+}
+
+.thumbnail-project .project {
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+}
+
+.thumbnail-project .project .content {
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: 999;
+	position: absolute;
+	transition:.5s;
+  background: #446CB3;
+}
+
+.description {
+	display: block;
+	width: 100%;
+	background-color:#202633;
+	overflow: hidden;
+	color: #fff;
+	margin-top: 100px;
+}
+
+.thumbnail-project .project:hover .content {
+	margin-top: -120px;
+}
+
+.description p {
+	display: block;
+	color: #fff;
+	position: relative;
+	float: left;
+	width: 200px;
+	margin:10px;
+	margin-bottom: 0;
+	font-family: 'Lato', sans-serif;
+	text-indent: 10px;
+
+}
+.btn-more {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	position: relative;
+	float: right;
+	padding:3px 10px;
+	background: #AE2341;
+	border-radius: 4px;
+	margin:10px;
+}
+.nome-secao {
+	font-size:18px;
+}
+.descricao {
+	font-size: 14px;
+}
+		.site-footer {
+			width: 85%;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 50px;
+			border-top: 2px solid #DADFE1;
+			padding: 30px;
+			text-align: center;
+		}
+
+		.site-footer p {
+			color: silver;
+			font-size: 1.3em;
+		}
+
+		
+		.icons-container .icons-list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.icons-container .icons-list li {
+			display: inline-block;
+		}
+
+		.icons-container .icons-list li a {
+			text-decoration: none;
+			color: silver;
+			margin: 10px;
+		}
+
+		.icons-container .icons-list li a:hover {
+			color: #DADFE1;
+			transition: 0.3s;
+		}
+
+		.content-post {
+			color: #333;
+			width: 85%;
+			margin: 0 auto;
+		}
+
+         @media (max-width: 940px) {
+         	.content-post {
+			color: #333;
+			width: 100%;
+			margin: 0 auto;
+		  }
+    		.row {
+    			width: 90%;
+    		}
+
+
+    		.nav-container .header-title {
+    			font-size: 1.8em;
+    		}
+
+    		
+    		.nav-top  {
+    		position: fixed;
+			height: 0;
+			width: 100%;
+			top: 0;
+			right: 0;
+			background: #DADFE1;
+			overflow: hidden;
+			transition: .5s ease-in;
+			margin: 0;
+			z-index: 2;
+
+    		}
+
+    		.nav-top .close {
+    			display: block;
+    		}
+
+    		.toggle-menu {
+    			display: block;
+    		}
+
+    		.nav-top .nav-top-itens {
+    			margin-top: 60px;
+    			padding: 0;
+    		}
+
+    		.nav-top .nav-top-itens li {
+    			display: block;
+    			padding: 10px;
+    			margin-bottom: 10px;
+    		}
+
+    		.nav-top .nav-top-itens li a {
+    			font-size: 1.4em;
+    			margin-bottom: 10px;
+    			color: #446CB3;
+    		}
+
+    		
+    		.content-list {
+    			padding: 5%;
+    			width: 90%;
+    			margin-right: auto;
+    			margin-left: auto;
+    		}
+
+    		.post-title {
+    			padding-bottom: 20px;
+    		}
+
+    		.content-list .list-post-item {
+    			width: 90%;
+    			margin-top: 10px;
+    		}
+
+    		.list-post-item .list-post-title {
+    			font-size: 1.6em;
+    		}
+
+    		.list-post-item .list-post-date time {
+    			font-size: 1.1em;
+    		}
+
+    		
+        	.row  .thumbnail-project {
+        		text-align: center;
+        	}
+
+    		.content-list .thumbnail-project {
+    			margin: 0 auto;
+    			margin-bottom: 20px;
+        		width: 47%;
+        	}
+
+         .site-footer {
+			margin-top: 20px;
+			border-top: 2px solid #DADFE1;
+			padding: 30px;
+			text-align: center;
+		}
+
+		.site-footer p {
+			color: silver;
+			font-size: 1.2em;
+		}
+
+		
+		.icons-container .icons-list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.icons-container .icons-list li {
+			display: inline-block;
+		}
+
+		.icons-container .icons-list li a {
+			text-decoration: none;
+			color: silver;
+			margin: 10px;
+		}
+
+        }
+
+         @media (max-width: 646px) {
+         	.content-list {
+         		padding: 5px;
+         	}
+
+         	.row {
+         		width: 90%;
+         		margin: auto;
+         	}
+
+        	
+        	.row .list-post-item {
+        		margin-right: auto;
+        		margin-left: auto;
+        		text-align: center;
+        	}
+
+        	.content-list .projects-container {
+        		text-align: center;
+        	}
+
+        	.content-list .thumbnail-project {
+        		margin-right: auto;
+        		margin-left: auto;
+
+        		display: inline-block;
+        		width: 100%;
+        	}
+         }
+		/* POSTS */
+
+		#disqus_thread {
+			margin-top: 6rem;
+		}
+
+		
+
+		.content-post .post-title {
+			text-align: left;
+			margin-top: 30px;
+			color: #446CB3;
+		}
+
+		.content-post .post-date {
+			margin-top: -2rem;
+		}
+
+		.content-post h2 {
+			margin-top: 5rem;
+			font-size: 1.8em;
+			font-weight: 700;
+		}
+
+		.content-post h3 {
+			margin-top: 3rem;
+			font-size: 1.6em;
+			font-weight: 700;
+		}
+
+		.content-post h4 {
+			 margin-top: 1.3rem;
+			 font-size: 1.4em;
+			 color: gray;
+			 font-weight: 700;
+		}
+
+		.content-post h5 {
+			font-size: 1.2em;
+			font-weight: 700;
+		}
+		
+		.content-post p {
+			margin-top: 1.2rem;
+			font-size: 1.1em;
+		}
+
+		.content-post em {
+			font-weight: bold;
+		}
+
+		.content-post blockquote {
+			margin-top: 2rem;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+
+		.content-post blockquote p {
+			margin-top: 0;
+		}
+
+		.content-post img {
+			text-align: center;
+		}
+
+		.content-post ul {
+			margin-top: 1.6rem;
+		}
+
+		.content-post ul li,
+		.content-post ol li  {
+			font-size: 1.1em;
+		}
+
+		.content-post .post-date time {
+			color: #3498DB;
+			font-size: 20px;
+		}
+
+		.content-post .post-date {
+			margin-bottom: 30px;
+		}
+
+		
+
+

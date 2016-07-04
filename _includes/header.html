@@ -1,17 +1,27 @@
-<header class="site-header">
-    <div class="container">
-        <a id="site-header-brand" href="/" title="{{ site.name }}">
-            <span class="octicon octicon-mark-github"></span> {{ site.name }}
-        </a>
-        <nav class="site-header-nav" role="navigation">
-            {% for nav in site.navs %}
-            <a href="{{ nav.href }}"
-               class="{% if page.menu == nav.label %} selected {% endif %} site-header-nav-item hvr-underline-from-center"
-               target="{{ nav.target | default: _self }}"
-               title="{{ nav.label }}">
-                {{ nav.label }}
-            </a>
-            {% endfor %}
-        </nav>
+<header class="header-container">
+    <div class="nav-container clearfix">
+    <div class="row">
+       <h1 class="header-title">
+          <a href="https://github.com/evertonl1ma" target="_blank" <span class="fa fa-github" aria-hidden="true"></span></a>
+          <a href="/">@evertonl1ma</a>
+       </h1>
+       <nav class="nav-top">
+        <span class="close">X</span>
+        <ul class="nav-top-itens">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/projetos/">Projetos</a></li>
+          <li><a href="/sobre/">Sobre</a></li>
+        </ul>
+       </nav>
+
+      <div class="toggle-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+       
+     </div>
     </div>
-</header>
+  </header>
