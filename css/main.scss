@@ -123,6 +123,10 @@ $on-laptop:        800px;
 		.toggle-menu {
 			cursor: pointer;
 			display: none;
+			top: 10px;
+			left: 90%;
+			position: relative;
+			width: 50px;
 		}
 
 		.toggle-menu span {
@@ -131,9 +135,6 @@ $on-laptop:        800px;
 			height: 3px;
 			background: #FFF;
 			margin-bottom: 10px;
-			position: relative;
-			top: 10px;
-			left: 90%;
 		}
 
 		.nav-top .nav-top-itens{
@@ -339,6 +340,7 @@ $on-laptop:        800px;
 			width: 100%;
 			margin: 0 auto;
 		  }
+
     		.row {
     			width: 90%;
     		}
@@ -351,18 +353,20 @@ $on-laptop:        800px;
     		
     		.nav-top  {
     		position: fixed;
-			height: 0;
+			height: 300px;
 			width: 100%;
 			top: 0;
 			right: 0;
 			background: #DADFE1;
-			overflow: hidden;
-			transition: .5s ease-in;
 			margin: 0;
-			z-index: 2;
-
+			z-index: 9999;
+			transition: .5s ease-in;
     		}
 
+    		.show-menu {
+    			transform: translateY(-300px);
+			    transition: .5s ease-in;
+    		}
     		.nav-top .close {
     			display: block;
     		}
@@ -465,7 +469,6 @@ $on-laptop:        800px;
          		margin: auto;
          	}
 
-        	
         	.row .list-post-item {
         		margin-right: auto;
         		margin-left: auto;
@@ -483,6 +486,24 @@ $on-laptop:        800px;
         		display: inline-block;
         		width: 100%;
         	}
+         }
+
+         @media (max-width: 388px) {
+         	.header-title a{
+         		font-size: 0.9em;
+         	}
+
+         	.toggle-menu {
+         		display: block;
+         	}
+
+         	.toggle-menu span {
+         		width: 30px;
+         	}
+
+         	.site-footer  {
+         		width: 80%;
+         	}
          }
 		/* POSTS */
 

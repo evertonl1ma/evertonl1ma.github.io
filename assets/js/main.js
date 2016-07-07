@@ -1,10 +1,22 @@
-var open= document.querySelector(".toggle-menu"),
-	close= document.querySelector(".close");
 
-	close.addEventListener("click", function() {
-		document.querySelector(".nav-top").style.height= "0";
-	});
+var toggle= document.querySelectorAll(".toggle"),
+	menu= document.querySelector(".nav-top");
 
-	open.addEventListener("click", function() {
-		document.querySelector(".nav-top").style.height= "300px";
-	});
+for(var i= 0; i < toggle.length; i++) {
+	toggle[i].addEventListener("click", menuAction)
+}
+
+
+document.addEventListener("keyup", function(e) {
+	if(e.keyCode == 27) {
+		menuAction();
+	}
+});
+
+function menuAction() {
+	if(menu.classList.contains("show-menu")) {
+		menu.classList.remove("show-menu");
+	} else {
+		menu.classList.add("show-menu");
+	}
+}
