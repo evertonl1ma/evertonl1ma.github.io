@@ -8,6 +8,6 @@ Olá, meu nome é Everton Lima, e eu sou desenvolvedor front end. Apaixonado por
 
 ## Contato
 
-email: everton-tonlima@hotmail.com
+email: ever-tonlima@hotmail.com
 
 Github: <http://github.com/evertonl1ma>
