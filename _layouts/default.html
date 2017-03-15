@@ -1,26 +1,14 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>{%if page.title %}{{page.title}}{% else %}{{site.name}}{% endif %}</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" href="https://github.com/evertonl1ma" content="Everton Lima">
-  <meta name="description" content="Um blog de um desenvolvedor Front End e entusiasta de novas tecnologias.">
-  <meta itemprop="name" content="Everton Lima - Desenvolvedor Front End"/>
-  <meta itemprop="description" content="Um blog de um desenvolvedor Front End e entusiasta de novas tecnologias. ">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/icons/favicon-16x16.png"> 
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/main.css">
-  
-</head>
-<body>
-   {% include header.html %}
- 
-  {{content}}
-
-  {% include footer.html %}
-</body>
-<script src="/assets/js/main.js"></script>
-</html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+      {% include header.html %}
+      <section id="about">
+        {% include about.html %}
+      </section>
+      <section id="projects">
+        {% include projects.html %}
+      </section>
+        {{ content }}
+      {% include footer.html %}
+  </body>

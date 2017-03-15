@@ -1,21 +1,21 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
 title: Everton Lima
+description: Everton Lima Desenvolvedor Front End
+# baseurl: "/particle" # the subpath of your site, e.g. /blog
+# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+url: "http://evertondelima.com.br"
+
+# User settings
+username: Everton Lima
+user_description: Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS.
+user_title: Desenvolvedor Front End
 email: ever-tonlima@hotmail.com
-description: > # this means to ignore newlines until "baseurl:"
- Blog e site pessoal
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://evertondelima.com.br" # the base hostname & protocol for your site
-twitter_username: evertonl1ma
+linkedin_username: evertonl1ma
 github_username:  evertonl1ma
+codepen_username:  evertonl1ma
 
-# Build settings
-markdown: kramdown
-permalink: /:title
+# Google-analytics
+google-analytics:
+  id: ""
 
+exclude: ['package.json', 'src' , 'node_modules']

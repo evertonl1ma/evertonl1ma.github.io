@@ -1,0 +1,21 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Everton Lima
+email: ever-tonlima@hotmail.com
+description: > # this means to ignore newlines until "baseurl:"
+ Blog e site pessoal
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://evertondelima.com.br" # the base hostname & protocol for your site
+twitter_username: evertonl1ma
+github_username:  evertonl1ma
+
+# Build settings
+markdown: kramdown
+permalink: /:title
+
