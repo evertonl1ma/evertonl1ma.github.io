@@ -40,3 +40,7 @@
 .projetos-container .projetos:last-child {
 	flex-grow: 0;
 }  
+
+.footer {
+	margin-top: 0 !important;
+}
